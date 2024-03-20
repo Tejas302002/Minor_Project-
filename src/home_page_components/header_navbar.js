@@ -1,5 +1,6 @@
 import React from 'react';
-import './header_navbar.css'; // Import your CSS file for styling
+import { Link } from 'react-router-dom';
+import './header_navbar.css';
 import logo from './images/image.png';
 
 function HeaderNav() {
@@ -10,7 +11,7 @@ function HeaderNav() {
       </div>
       <nav className="header__nav">
         <ul className="header__nav-list">
-          <li><a href="about:blank" target="_blank" rel="noreferrer">Sign Up</a></li>
+          <li><Link to="/login">Sign Up</Link></li>
           <li><a href="about:blank" target="_blank" rel="noreferrer">Application</a></li>
           <li><a href="about:blank" target="_blank" rel="noreferrer">Contact Us</a></li>
           <li><a href="about:blank" target="_blank" rel="noreferrer">About Us</a></li>

@@ -4,9 +4,12 @@ import './CardSlider.css';
 // Import all images from the images folder
 function importAll(r) {
   let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  r.keys().map((item, index) => { 
+    return images[item.replace('./', '')] = r(item);  // Add return statement
+  });
   return images;
 }
+
 
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg)$/));
 
